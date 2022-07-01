@@ -17,6 +17,7 @@ jobs:
       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
       - run: pwd
       - run: 'export PATH=$PATH:$(pwd)/ && echo $PATH'
+      - run: hcloud version
       
       - name: Create and Show Tags
         uses: ./
@@ -26,5 +27,5 @@ jobs:
           region: cn-north-4
           command_list: |
             hcloud ECS NovaListVersions --cli-region="cn-east-3"
-        
+      
 #       - run: cat ./hcloud_install.sh -y
