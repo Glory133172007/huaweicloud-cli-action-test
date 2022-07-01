@@ -7,6 +7,8 @@ jobs:
   show-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Create and Show Tags
         uses: ./
         with:
