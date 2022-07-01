@@ -15,6 +15,7 @@ jobs:
 
       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
+      - run: export PATH=$PATH:$(pwd)/
       
       - name: Create and Show Tags
         uses: ./
