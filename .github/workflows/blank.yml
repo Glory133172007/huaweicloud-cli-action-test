@@ -16,7 +16,7 @@ jobs:
       - run: export STACK=hcloud-toolkit
       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
-      - run: pwd
+      - run: echo $PATH
 #       - run: 'export PATH=$PATH:$(pwd)/ && echo $PATH'
       - run: ln -s $(pwd)/hcloud /usr/local/bin/
       - run: hcloud version
