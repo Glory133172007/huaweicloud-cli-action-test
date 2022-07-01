@@ -13,8 +13,8 @@ jobs:
 #       - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
 #       - run: bash ./hcloud_install.sh
 
-      - run: export STACK=hcloud-toolkit
-      - run: echo $STACK
+      - run: export STACK=hcloud-toolkit && echo $STACK
+#       - run: echo $STACK
       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
       - run: echo $PATH
