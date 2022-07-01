@@ -7,8 +7,10 @@ jobs:
   show-version:
     runs-on: ubuntu-latest
     steps:
-      
       - uses: actions/checkout@v2
+      
+      - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
+      - run: bash ./hcloud_install.sh -y
       
       - name: Create and Show Tags
         uses: ./
@@ -19,4 +21,4 @@ jobs:
           command_list: |
             hcloud ECS NovaListVersions --cli-region="cn-east-3"
         
-      - run: cat ./hcloud_install.sh -y
+#       - run: cat ./hcloud_install.sh -y
