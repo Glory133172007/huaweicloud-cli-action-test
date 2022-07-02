@@ -16,9 +16,9 @@ jobs:
 #       - run: export STACK=hcloud-toolkit && echo $STACK
 #       - run: echo $STACK
 
-#       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
-#       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
-#       - run: ln -s $(pwd)/hcloud /usr/local/bin/
+      - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
+      - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
+      - run: ln -s $(pwd)/hcloud /usr/local/bin/
 
 #       - run: export PATH=$PATH:$(pwd)/ && echo $PATH
 #       - run: echo export STACK=cloudshell >> ~/.bashrc && source ~/.bashrc
