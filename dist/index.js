@@ -226,11 +226,12 @@ exports.installKooCLIOnMacos = installKooCLIOnMacos;
 function installKooCLIOnLinux() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('current system is Linux.');
-//         yield tools.execCommand(`curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh`);
-//         yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
-        yield tools.execCommand(`curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"`);
-        yield tools.execCommand(`tar -zxvf huaweicloud-cli-linux-amd64.tar.gz`);
-        yield tools.execCommand(`'export PATH=$PATH:$(pwd)/ && echo $PATH'`);
+        yield tools.execCommand(`curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh`);
+        yield tools.execCommand(`sudo bash ./hcloud_install.sh -y`);
+        yield core.addPath('/usr/local/hcloud');
+//         yield tools.execCommand(`curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"`);
+//         yield tools.execCommand(`tar -zxvf huaweicloud-cli-linux-amd64.tar.gz`);
+//         yield tools.execCommand(`'export PATH=$PATH:$(pwd)/ && echo $PATH'`);
     });
 }
 exports.installKooCLIOnLinux = installKooCLIOnLinux;
