@@ -231,7 +231,7 @@ function installKooCLIOnLinux() {
 //         yield core.addPath('/usr/local/hcloud');
         yield tools.execCommand(`curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"`);
         yield tools.execCommand(`tar -zxvf huaweicloud-cli-linux-amd64.tar.gz`);
-        yield tools.execCommand(`ln -s $(pwd)/hcloud /usr/local/bin/`);
+        yield tools.execCommand(`export PATH=$PATH:$(pwd)/`);
     });
 }
 exports.installKooCLIOnLinux = installKooCLIOnLinux;
