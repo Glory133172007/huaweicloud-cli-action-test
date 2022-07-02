@@ -166,6 +166,9 @@ function installCLIOnSystem() {
         core.info('start install KooCLI');
         const platform = os.platform();
         yield installKooCLIByPlatform(platform);
+        
+        yield core.exportVariable('STACK', 'hcloud-toolkit');
+        yield tools.execCommand(`hcloud version`);
         return checkKooCLIInstall();
     });
 }
