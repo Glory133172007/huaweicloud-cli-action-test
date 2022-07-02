@@ -15,13 +15,15 @@ jobs:
 
 #       - run: export STACK=hcloud-toolkit && echo $STACK
 #       - run: echo $STACK
-      - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
-      - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
-      - run: echo $PATH
+
+#       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
+#       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
+#       - run: echo $PATH
+      
 #       - run: 'export PATH=$PATH:$(pwd)/ && echo $PATH'
-      - run: ln -s $(pwd)/hcloud /usr/local/bin/
-      - run: echo export STACK=cloudshell >> ~/.bashrc && source ~/.bashrc
-      - run: hcloud version
+#       - run: ln -s $(pwd)/hcloud /usr/local/bin/
+#       - run: echo export STACK=cloudshell >> ~/.bashrc && source ~/.bashrc
+#       - run: hcloud version
 #       - run: export STACK=hcloud-toolkit && echo $STACK && hcloud version
       
       - name: Create and Show Tags
