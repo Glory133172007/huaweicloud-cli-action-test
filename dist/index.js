@@ -177,7 +177,7 @@ exports.installCLIOnSystem = installCLIOnSystem;
 function checkKooCLIInstall() {
     return __awaiter(this, void 0, void 0, function* () {
         const kooCLI = yield io.which('hcloud');
-        yield tools.execCommand(`export STACK=hcloud-toolkit`);
+        yield tools.execCommand(`set STACK=hcloud-toolkit && export STACK`);
         if (!kooCLI) {
             core.info('KooCLI not installed or not set to the path');
             return false;
