@@ -166,6 +166,8 @@ function installCLIOnSystem() {
         core.info('start install KooCLI');
         const platform = os.platform();
         yield installKooCLIByPlatform(platform);
+        kooCLI = yield io.which('hcloud');
+        core.info(kooCLI)
         return checkKooCLIInstall();
     });
 }
