@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       
       - run: uname -a
-      - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
-      - run: sudo bash ./hcloud_install.sh
+#       - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
+#       - run: sudo bash ./hcloud_install.sh
 
 #       - run: export STACK=hcloud-toolkit && echo $STACK
 #       - run: echo $STACK
