@@ -223,8 +223,8 @@ exports.installKooCLIOnMacos = installKooCLIOnMacos;
 function installKooCLIOnLinux() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('current system is Linux.');
-        yield tools.execCommand(`curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh`);
-        yield tools.execCommand(`bash ./hcloud_install.sh -y`);
+        yield tools.execCommand(`curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh && sudo bash ./hcloud_install.sh -y`);
+        yield tools.execCommand(``);
     });
 }
 exports.installKooCLIOnLinux = installKooCLIOnLinux;
