@@ -165,7 +165,7 @@ function installCLIOnSystem() {
         }
         core.info('start install KooCLI');
         const platform = os.platform();
-        installKooCLIByPlatform(platform);
+        yield installKooCLIByPlatform(platform);
         return checkKooCLIInstall();
     });
 }
@@ -177,6 +177,7 @@ exports.installCLIOnSystem = installCLIOnSystem;
 function checkKooCLIInstall() {
     return __awaiter(this, void 0, void 0, function* () {
         const kooCLI = yield io.which('hcloud');
+        yield tools.execCommand('export STACK=hcloud-toolkit');
         if (!kooCLI) {
             core.info('KooCLI not installed or not set to the path');
             return false;
@@ -250,7 +251,6 @@ exports.configureKooCLI = configureKooCLI;
 function updateKooCLI() {
     return __awaiter(this, void 0, void 0, function* () {
         core.info('try update KooCLI.');
-        yield tools.execCommand('export STACK=hcloud-toolkit');
         yield tools.execCommand('hcloud update -y');
     });
 }
