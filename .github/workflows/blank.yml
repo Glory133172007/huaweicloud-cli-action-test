@@ -19,6 +19,8 @@ jobs:
       - run: curl -LO "https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/huaweicloud-cli-linux-amd64.tar.gz"
       - run: tar -zxvf huaweicloud-cli-linux-amd64.tar.gz
       - run: ln -s $(pwd)/hcloud /usr/local/bin/
+      
+      - run: cloud ECS NovaListVersions --cli-region="cn-east-3"
 
 #       - run: export PATH=$PATH:$(pwd)/ && echo $PATH
 #       - run: echo export STACK=cloudshell >> ~/.bashrc && source ~/.bashrc
