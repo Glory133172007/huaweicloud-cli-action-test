@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - run: uname -a
+      - run: echo $HOSTTYPE
 #       - run: curl -sSL https://hwcloudcli.obs.cn-north-1.myhuaweicloud.com/cli/latest/hcloud_install.sh -o ./hcloud_install.sh
 #       - run: sudo bash ./hcloud_install.sh
 
